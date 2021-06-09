@@ -1,0 +1,54 @@
+/*
+
+  Selection sort algorithm in C
+  By: Bhava0405
+  
+  Output:
+  Enter total number of elements: 6
+  Enter the 5 elements: 27 35 14 16 10 4
+  Sorted Array: 4 10 14 16 27 35
+  
+*/
+
+#include<stdio.h>
+void swap(int * p1,int * p2)
+{
+    int temp;
+    temp=*p1;
+    *p1=*p2;
+    *p2=temp;
+}
+void selectionSort(int arr[],int n)
+{
+    int i,j,min_idx;
+    for(i=0;i<n;i++)
+    {
+        min_idx=i;
+        for(j=i+1;j<n;j++)
+        {
+            if(arr[j]<arr[min_idx])
+            {
+                min_idx=j;
+            }
+        }
+        swap(&arr[min_idx],&arr[i]);
+    }
+}
+void main()
+{
+    int iarr[30];
+    int size,a,k;
+    printf("Enter the number of elements : ");
+    scanf("%d",&size);
+    printf("Enter the %d elements : ",size);
+    for(a=0;a<size;a++)
+    {
+        scanf("%d",&iarr[a]);
+    }
+    selectionSort(iarr,size);
+    printf("Sorted Array : ");
+    for(k=0;k<size;k++)
+    {
+        printf(" %d ",iarr[k]);
+    }
+}
