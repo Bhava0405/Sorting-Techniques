@@ -5,7 +5,7 @@
   
   Output:
   Enter total number of elements: 6
-  Enter the 5 elements: 27 35 14 16 10 4
+  Enter the 6 elements: 27 35 14 16 10 4
   Sorted Array: 4 10 14 16 27 35
   
 */
